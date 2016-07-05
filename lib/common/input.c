@@ -18,6 +18,8 @@
 #include "xdot.h"
 #include "agxbuf.h"
 
+int MaxIters = INT_MAX;
+
 static char *usageFmt =
     "Usage: %s [-Vv?] [-(GNE)name=val] [-(KTlso)<val>] <dot files>\n";
 
@@ -385,6 +387,9 @@ int dotneato_args_initialize(GVC_t * gvc, int argc, char **argv)
 		break;
 	    case 'y':
 		Y_invert = TRUE;
+		break;
+	    case 'z':
+		MaxIters = atoi(rest);
 		break;
 	    case '?':
 		return (dotneato_usage(0));

@@ -61,6 +61,7 @@ extern "C" {
 #define EXTERN extern
 #endif
 
+    EXTERN int MaxIters;
     EXTERN char *Version;
     EXTERN char **Files;	/* from command line */
     EXTERN const char **Lib;		/* from command line */

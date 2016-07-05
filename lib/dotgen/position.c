@@ -142,7 +142,7 @@ void dot_position(graph_t * g, aspect_t* asp)
 
 static int nsiter2(graph_t * g)
 {
-    int maxiter = INT_MAX;
+    int maxiter = MaxIters;
     char *s;
 
     if ((s = agget(g, "nslimit")))
